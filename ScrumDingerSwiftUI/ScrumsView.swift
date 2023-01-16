@@ -23,6 +23,9 @@ struct ScrumsView: View {
                 }
                 .listRowBackground(scrum.theme.mainColor)
             }
+            .onDelete { indexSet in
+                scrums.remove(atOffsets: indexSet)
+            }
         }
         .navigationTitle("Daily Scrums")
         .toolbar {
